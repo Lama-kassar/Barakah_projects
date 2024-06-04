@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 TextStyle small = const TextStyle(
-    fontSize: 16, fontWeight: FontWeight.w500, color: white_second);
+    fontSize: 15, fontWeight: FontWeight.w400, color: whitePrimary);
 
-TextStyle meduim = const TextStyle(
-    fontSize: 24, fontWeight: FontWeight.w700, color: white_primary);
+TextStyle minismall = const TextStyle(
+    fontSize: 12, fontWeight: FontWeight.w600, color: textusrcol);
 
-TextStyle Name_style = const TextStyle(
-    fontSize: 18, fontWeight: FontWeight.w500, color: Color(0xFFF9F9F9));
+TextStyle nameStyle = const TextStyle(
+    fontSize: 18, fontWeight: FontWeight.w500, color: whitePrimary);
 
-TextStyle head_tile = const TextStyle(
-    fontSize: 9, fontWeight: FontWeight.w700, color: textfieldcol);
+TextStyle headTile = const TextStyle(
+    letterSpacing: 1.5,
+    fontSize: 24,
+    fontWeight: FontWeight.w800,
+    color: whitePrimary);
