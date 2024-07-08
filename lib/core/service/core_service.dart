@@ -19,11 +19,11 @@ class ProductServiceImp extends ProductService {
     try {
       response = await dio.get(baseurl);
       if (response.statusCode == 200) {
-        List<ProductModel> products = List.generate(
+        ListOf<ProductModel> products = List.generate(
           response.data.length,
           (index) => ProductModel.fromMap(response.data[index]),
-        );
-        return ListOf<ProductModel>(data: products);
+        ) as ListOf<ProductModel>;
+        return ListOf<ProductModel>(data: products.data);
       } else {
         return ErrorModel(message: 'The Status code is not 200');
       }
@@ -32,28 +32,3 @@ class ProductServiceImp extends ProductService {
     }
   }
 }
-
-
-class SuccessGetProducts extends productState {
-  final ProductModel productModel;
-  SuccessGetProducts({
-    required this.productModel,
-  });
-}
-
-class ErrorToGetProoducts extends productState {}
-
-class LoadingToGetProducts extends productState {}
-
-class LoadingMoreProducts extends productState {}
-
-
-class ErrorEvent extends productEvent {
-  final String error;
-
-  ErrorEvent(this.error);
-}
-
-class GetProducts extends productEvent {}
-
-class LoadingMore extends productEvent {}

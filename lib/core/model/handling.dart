@@ -15,7 +15,7 @@ class ExceptionModel extends ResultModel {
 }
 
 class ListOf<T extends ResultModel> extends ResultModel {
-  List<T> data;
+  ListOf<T> data;
   ListOf({
     required this.data,
   });
